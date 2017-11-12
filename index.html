@@ -52,20 +52,30 @@
           background: url(polina.jpg) no-repeat;
           background-size: cover; 
       }
+      
+      button:hover {
+        cursor: pointer;
+      }
+
+      button:active {
+        transform: translateY(4px);
+      }
   </style>
 </head>
 
-<body style="background-color:black;font-family:Comic Sans MS, cursive, sans-serif;color:darkorchid;">
-    <video playsinline autoplay muted="false" loop poster="polina.jpg" id="bgvid">
+<body style="background-color:black;font-family:Comic Sans MS, cursive, sans-serif;">
+    <video playsinline autoplay muted="false" loop poster="harmonies-30s.png" id="bgvid">
         <source src="harmonies-30s.mp4" type="video/mp4">
     </video>
 
     <h1 style="text-align:center;font-size:72px;">Crash Blossom</h1>
-    <button style="margin: auto;" onclick="myFunction()">Mute/Unmute</button>
 
     <div style="position:absolute;bottom:0px;left:0px;" >
+        <div style="padding:10px;">
+            <button style="color:white;background-color:red;outline:none;font-family:Comic Sans MS, cursive, sans-serif;border: 2px solid;border-radius: 0.4em;border-color:red;" onclick="myFunction()">&#128266; Toggle "Noise"</button>
+        </div>
         <div>
-          <iframe style="padding:10px;width:auto;height:auto;" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fcrashblossom&color=white_orange&size=64" style="width: 64px; height: 64px;"></iframe>          
+          <iframe style="padding:10px;" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fcrashblossom&color=white_orange&size=64" style="width: 64px; height: 64px;"></iframe>          
         </div>
         <div>
           <iframe style="padding:10px;" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCrash-Blossom-260952051086196%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
