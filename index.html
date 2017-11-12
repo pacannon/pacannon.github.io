@@ -57,14 +57,22 @@
     </video>
 
     <h1 style="text-align:center;font-size:72px;">Crash Blossom</h1>
+    <button style="margin: auto;" onclick="myFunction()">Mute/Unmute</button>
 
     <div style="position:absolute;bottom:0px;left:0px;" >
         <div>
-          <iframe style="padding:10px;width:auto;height:auto;" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fcrashblossom&color=orange_transparent&size=64" style="width: 64px; height: 64px;"></iframe>          
+          <iframe style="padding:10px;width:auto;height:auto;" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fcrashblossom&color=white_orange&size=64" style="width: 64px; height: 64px;"></iframe>          
         </div>
         <div>
-          <iframe style="padding:10px;" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCrash-Blossom-260952051086196%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          <iframe style="padding:10px;" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCrash-Blossom-260952051086196%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
   </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("bgvid");
+      x.muted = !x.muted;
+    }
+  </script>
 </body>
 </html>
