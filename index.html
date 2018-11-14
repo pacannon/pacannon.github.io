@@ -74,8 +74,11 @@
 
 <body style="background-color:black;font-family:Comic Sans MS, cursive, sans-serif;">
     <video playsinline autoplay muted="false" loop poster="harmonies-30s.png" id="bgvid">
-        <source src="harmonies-30s.mp4" type="video/mp4">
+        <source src="Wildlife.mp4" type="video/mp4">
     </video>
+    <audio autoplay src="ShiftyemoHOT.mp3" id="sound">
+      <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+      </audio>
 
     <h1 style="text-align:center;font-size:72px;">Crash Blossom</h1>
 
@@ -93,7 +96,7 @@
 
   <script>
     function myFunction() {
-      var x = document.getElementById("bgvid");
+      var x = document.getElementById("sound");
       x.muted = !x.muted;
     }
   </script>
