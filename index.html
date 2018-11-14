@@ -58,7 +58,7 @@
       }
 
       button:active {
-        transform: translateY(4px);
+        transform: scale(4,4);
       }
 
       @media screen and (max-device-width: 800px) {
@@ -73,9 +73,26 @@
 </head>
 
 <body style="background-color:black;font-family:Comic Sans MS, cursive, sans-serif;">
-    <video playsinline autoplay muted="false" loop poster="harmonies-30s.png" id="bgvid">
-        <source src="Wildlife.mp4" type="video/mp4">
-    </video>
+
+<video muted autoplay playsinline poster="harmonies-30s.png" id="bgvid" onended="nextVid();">
+    <source src="vids/Wildlife.mp4" type="video/mp4">
+</video>
+
+<script>
+var vidCount = 0;
+var videoList = ["vids/Wildlife.mp4","vids/4PhilsofPhilGif.mp4","vids/30seckj.mp4","vids/harmonies-30s.mp4",
+                "vids/MarshalWalk.mp4","vids/AustinRoofPhilWill.mp4","vids/TripleMarshall.mp4"];
+
+function nextVid() {
+  vidCount++;
+  document.getElementsByTagName("video")[0].setAttribute("src",videoList[vidCount]);
+  if(vidCount > videoList.length){
+    vidCount = 0;
+    document.getElementsByTagName("video")[0].setAttribute("src",videoList[vidCount]);
+  }
+} 
+</script>
+
     <audio autoplay src="ShiftyemoHOT.mp3" id="sound">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
       </audio>
@@ -85,6 +102,9 @@
     <div style="position:absolute;bottom:0px;left:0px;" >
         <div style="padding:10px;">
             <button style="color:white;background-color:red;outline:none;font-family:Comic Sans MS, cursive, sans-serif;border: 2px solid;border-radius: 0.4em;border-color:red;" onclick="myFunction()">&#128266; Toggle "Noise"</button>
+        </div>
+        <div style="padding:10px;">
+            <button style="color:white;background-color:green;outline:none;font-family:Comic Sans MS, cursive, sans-serif;border: 2px solid;border-radius: 0.4em;border-color:green;" onclick="nextVid()">&#9654; Change "Visual"</button>
         </div>
         <div>
           <iframe style="padding:10px;" allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fcrashblossom&color=white_orange&size=64" style="width: 64px; height: 64px;"></iframe>          
